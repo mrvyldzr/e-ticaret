@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @brandpro %>
+
+<div>
+  <%= link_to "Edit this brandpro", edit_brandpro_path(@brandpro) %> |
+  <%= link_to "Back to brandpros", brandpros_path %>
+
+  <%= button_to "Destroy this brandpro", @brandpro, method: :delete %>
+</div>

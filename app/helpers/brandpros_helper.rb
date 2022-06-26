@@ -1,0 +1,2 @@
+module BrandprosHelper
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: brandpro) do |form| %>
+  <% if brandpro.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(brandpro.errors.count, "error") %> prohibited this brandpro from being saved:</h2>
+
+      <ul>
+        <% brandpro.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :brand_id, style: "display: block" %>
+    <%= form.number_field :brand_id %>
+  </div>
+
+  <div>
+    <%= form.label :product_id, style: "display: block" %>
+    <%= form.number_field :product_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
