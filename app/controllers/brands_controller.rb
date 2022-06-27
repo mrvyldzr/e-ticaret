@@ -49,7 +49,7 @@ class BrandsController < ApplicationController
 
   # DELETE /brands/1 or /brands/1.json
   def destroy
-    @brand.destroy
+    @brand
 
     respond_to do |format|
       format.html { redirect_to brands_url, notice: "Brand was successfully destroyed." }
@@ -65,6 +65,6 @@ class BrandsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def brand_params
-      params.require(:brand).permit(:title)
+      params.require(:brand).permit(:title )
     end
 end

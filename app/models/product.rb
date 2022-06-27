@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-    belongs_to :brand, :optional => true
+    has_and_belongs_to_many :brand
 end

@@ -7,8 +7,10 @@
     <%= render product %>
     <p>
       <%= link_to "Show this product", product %>
+      <% if product.brand_id.present?  %>
+        <%= @brand.find("#{product.brand_id}").title %>
+      <%end%>
     </p>
   <% end %>
 </div>
-
 <%= link_to "New product", new_product_path %>

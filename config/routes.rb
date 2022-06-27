@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   resources :brandpros
   resources :brandproducts
   resources :products
@@ -7,4 +8,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'welcome#index'
+  
 end

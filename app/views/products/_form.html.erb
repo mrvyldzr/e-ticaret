@@ -16,9 +16,9 @@
     <%= form.text_field :title %>
   </div>
   <br/>
-  <%= form.select :brand_id, Brand.all.collect { |p| [ p.title, p.id ] },  { prompt: "Select product" } ,include_blank: true %>
-
-
+  
+ 
+  <%= form.collection_select :brand_id, Brand.all, :id,:title %><br>
 
   <div>
   <br />
